@@ -137,7 +137,7 @@ function populateMonthSelector() {
   }
 }
 
-monthSelector.addEventListener('change', () => {
+  monthSelector.addEventListener('change', () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   generateCalendar(tasks);
 });
