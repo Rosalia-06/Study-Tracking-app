@@ -1,0 +1,126 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4ff;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#darkToggle {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tracker {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input {
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #e3f2fd;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.progressContainer {
+  margin: 20px 0;
+}
+
+.calendar-section {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 80px;
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.day .date {
+  font-weight: bold;
+}
+
+.day .task {
+  font-size: 12px;
+  margin-top: 5px;
+  background: #d0eaff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark .tracker,
+.dark .calendar-section {
+  background-color: #1e1e1e;
+  box-shadow: none;
+}
+
+.dark input,
+.dark button,
+.dark progress {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}

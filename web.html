@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 My Study Tracker</h1>
+    <button id="darkToggle">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <section class="tracker">
+    <form id="taskForm">
+      <input type="text" id="subject" placeholder="Enter subject" required />
+      <input type="text" id="chapter" placeholder="Enter chapter/topic" required />
+      <input type="date" id="taskDate" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="progressContainer">
+      <label>Progress:</label>
+      <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+
+    <ul id="taskList"></ul>
+  </section>
+
+  <section class="calendar-section">
+    <h2>📅 Study Calendar</h2>
+    <div id="calendar"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
