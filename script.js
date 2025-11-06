@@ -42,7 +42,7 @@ function addTask(subject, chapter, date, save) {
   li.innerHTML = `
     <input type="checkbox" class="checkTask" />
     <span class="taskText">${subject} - ${chapter} (${date})</span>
-    <button class="editBtn">✏️ Edit</button>
+    <button class="editBtn">✏ Edit</button>
     <button class="deleteBtn">❌ Delete</button>
   `;
 
@@ -110,15 +110,15 @@ function showGreeting(tasks) {
   const hour = now.getHours();
   const minute = now.getMinutes().toString().padStart(2, '0');
   const todayTasks = tasks.filter(t => t.date === dateStr);
-  const taskMsg = todayTasks.length ? `Ab apko ${todayTasks[0].subject} start karna hai.` : `Aaj koi task set nahi hai. Chill maaro 😌`;
-  greeting.textContent = `Hi Vanshika, aaj ${now.toLocaleDateString('en-IN')} hai aur ${hour}:${minute} ho rahe hain. ${taskMsg}`;
+  const taskMsg = todayTasks.length ? Ab apko ${todayTasks[0].subject} start karna hai. : Aaj koi task set nahi hai. Chill maaro 😌;
+  greeting.textContent = Hi Vanshika, aaj ${now.toLocaleDateString('en-IN')} hai aur ${hour}:${minute} ho rahe hain. ${taskMsg};
 }
 
 function showReminder(tasks) {
   const today = new Date().toISOString().split('T')[0];
   const todayTasks = tasks.filter(t => t.date === today);
   if (todayTasks.length) {
-    alert(`Reminder: Aaj ka task hai — ${todayTasks[0].subject}: ${todayTasks[0].chapter}`);
+    alert(Reminder: Aaj ka task hai — ${todayTasks[0].subject}: ${todayTasks[0].chapter});
   }
 }
 
@@ -137,7 +137,7 @@ function populateMonthSelector() {
   }
 }
 
-  monthSelector.addEventListener('change', () => {
+monthSelector.addEventListener('change', () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   generateCalendar(tasks);
 });
@@ -159,9 +159,9 @@ function generateCalendar(tasks = []) {
   for (let i = 1; i <= daysInMonth; i++) {
     const day = document.createElement('div');
     day.classList.add('day');
-    day.innerHTML = `<div class="date">${i}</div>`;
+    day.innerHTML = <div class="date">${i}</div>;
 
-    const dayStr = `${year}-${String(selectedMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+    const dayStr = ${year}-${String(selectedMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')};
     tasks.forEach(task => {
       if (task.date === dayStr) {
         const taskEl = document.createElement('div');
